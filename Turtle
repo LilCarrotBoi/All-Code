@@ -1,0 +1,74 @@
+import turtle
+t = turtle.Pen()
+t.speed(100)
+
+
+def square():
+        for x in range(size_variable):
+            t.forward(x)
+            t.left(90)
+
+def triangle():
+        for x in range(size_variable):
+            t.forward(x)
+            t.left(120)
+
+def rightspiral():
+        for x in range(size_variable):
+            t.forward(x)
+            t.left(89)
+            
+def leftspiral():
+        for x in range(size_variable):
+            t.forward(x)
+            t.left(91)
+
+
+
+while True:
+
+    instruction = input("""What size would you like the shape?
+1) 50
+2)150
+3)350
+4)600.""")
+    if instruction == "1":
+        size_variable = 50
+    if instruction == "2":
+        size_variable = 150
+    if instruction == "3":
+        size_variable = 350
+    if instruction == "4":
+        size_variable =  600
+
+    instruction = input("""What color would you like your shape?
+1) orange
+2) pink
+3) cyan
+4) magenta.""")
+    if instruction == "1":
+        t.pencolor("orange")
+    if instruction == "2":
+        t.pencolor("pink")
+    if instruction == "3":
+        t.pencolor("cyan")
+    if instruction == "4":
+        t.pencolor("magenta")
+    instruction = input("""What shape would you want to draw?
+1) left spiral
+2) triangle
+3) right spiral
+4) square.""" )             
+    if instruction == "2":
+        triangle()
+    if instruction == "4":
+        square()
+    if instruction == "1":
+        leftspiral()
+    if instruction == "3":
+        rightspiral()
+click_to_close
+    
+
+
+
