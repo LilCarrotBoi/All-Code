@@ -3,6 +3,7 @@ import turtle
 t = turtle.Pen()
 t.speed(100)
 
+
             
 def draw_a_square():
     for x in range (200):
@@ -36,6 +37,8 @@ root = tk.Tk()
 frame = tk.Frame(root)
 frame.pack()
 
+bottom_frame = tk.Frame(root)
+bottom_frame.pack(side=tk.BOTTOM)
 
 blue_button = tk.Button(frame, 
                    text="Blue", 
@@ -61,30 +64,30 @@ pink_button = tk.Button(frame,
 pink_button.pack(side=tk.LEFT)
 
 
-square_button = tk.Button(frame, 
+square_button = tk.Button(bottom_frame, 
                    text="Square", 
-                   fg="green",
+                   fg="black",
                    command=draw_a_square)
 square_button.pack(side=tk.LEFT)
 
 
-triangle_button = tk.Button(frame, 
+triangle_button = tk.Button(bottom_frame, 
                    text="Triangle", 
-                   fg="green",
+                   fg="black",
                    command=draw_a_triangle)
 triangle_button.pack(side=tk.LEFT)
 
 
-rightspiral_button = tk.Button(frame, 
+rightspiral_button = tk.Button(bottom_frame, 
                    text="RightSpiral", 
-                   fg="green",
+                   fg="black",
                    command=draw_a_rightspiral)
 rightspiral_button.pack(side=tk.LEFT)
 
 
-leftspiral_button = tk.Button(frame, 
+leftspiral_button = tk.Button(bottom_frame, 
                    text="Left Spiral", 
-                   fg="green",
+                   fg="black",
                    command=draw_a_leftspiral)
 leftspiral_button.pack(side=tk.LEFT)
 
@@ -95,3 +98,4 @@ quit_button = tk.Button(frame,
 quit_button.pack(side=tk.LEFT)
 
 root.mainloop()
+
