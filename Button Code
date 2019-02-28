@@ -1,0 +1,97 @@
+import tkinter as tk
+import turtle
+t = turtle.Pen()
+t.speed(100)
+
+            
+def draw_a_square():
+    for x in range (200):
+                t.forward(x)
+                t.left(90)
+def draw_a_triangle():
+    for x in range (200):
+                t.forward(x)
+                t.left(120)
+def draw_a_leftspiral():
+    for x in range (200):
+                t.forward(x)
+                t.left(91)
+def draw_a_rightspiral():
+    for x in range (200):
+                t.forward(x)
+                t.left(89)
+def make_it_blue():
+    t.pencolor("blue")
+
+def make_it_red():
+    t.pencolor("red")
+
+def make_it_purple():
+    t.pencolor("purple")
+
+def make_it_pink():
+    t.pencolor("pink")
+
+root = tk.Tk()
+frame = tk.Frame(root)
+frame.pack()
+
+
+blue_button = tk.Button(frame, 
+                   text="Blue", 
+                   fg="blue",
+                   command=make_it_blue)
+blue_button.pack(side=tk.LEFT)
+red_button = tk.Button(frame, 
+                   text="Red", 
+                   fg="red",
+                   command=make_it_red)
+red_button.pack(side=tk.LEFT)
+
+
+purple_button = tk.Button(frame, 
+                   text="Purple", 
+                   fg="purple",
+                   command=make_it_purple)
+purple_button.pack(side=tk.LEFT)
+pink_button = tk.Button(frame, 
+                   text="Pink", 
+                   fg="pink",
+                   command=make_it_pink)
+pink_button.pack(side=tk.LEFT)
+
+
+square_button = tk.Button(frame, 
+                   text="Square", 
+                   fg="green",
+                   command=draw_a_square)
+square_button.pack(side=tk.LEFT)
+
+
+triangle_button = tk.Button(frame, 
+                   text="Triangle", 
+                   fg="green",
+                   command=draw_a_triangle)
+triangle_button.pack(side=tk.LEFT)
+
+
+rightspiral_button = tk.Button(frame, 
+                   text="RightSpiral", 
+                   fg="green",
+                   command=draw_a_rightspiral)
+rightspiral_button.pack(side=tk.LEFT)
+
+
+leftspiral_button = tk.Button(frame, 
+                   text="Left Spiral", 
+                   fg="green",
+                   command=draw_a_leftspiral)
+leftspiral_button.pack(side=tk.LEFT)
+
+
+quit_button = tk.Button(frame,
+                   text="Quit",
+                   command=quit)
+quit_button.pack(side=tk.LEFT)
+
+root.mainloop()
